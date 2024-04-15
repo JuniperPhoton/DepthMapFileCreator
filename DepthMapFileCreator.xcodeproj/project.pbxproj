@@ -14,6 +14,12 @@
 		22EB70172BCD117A00670760 /* DepthMapFileCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70162BCD117A00670760 /* DepthMapFileCreatorTests.swift */; };
 		22EB70212BCD117A00670760 /* DepthMapFileCreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70202BCD117A00670760 /* DepthMapFileCreatorUITests.swift */; };
 		22EB70232BCD117A00670760 /* DepthMapFileCreatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70222BCD117A00670760 /* DepthMapFileCreatorUITestsLaunchTests.swift */; };
+		22EB70302BCD176500670760 /* GrayscaleToDepthConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB702F2BCD176500670760 /* GrayscaleToDepthConverter.swift */; };
+		22EB70322BCD178000670760 /* GrayscaleToDepth.metal in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70312BCD178000670760 /* GrayscaleToDepth.metal */; };
+		22EB70342BCD17B300670760 /* DepthMapUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70332BCD17B300670760 /* DepthMapUtils.swift */; };
+		22EB70362BCD17DC00670760 /* CGImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70352BCD17DC00670760 /* CGImageUtils.swift */; };
+		22EB70382BCD1F0500670760 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB70372BCD1F0500670760 /* MainViewModel.swift */; };
+		22EB703B2BCD1F7C00670760 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22EB70392BCD1F7C00670760 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		22EB701C2BCD117A00670760 /* DepthMapFileCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepthMapFileCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB70202BCD117A00670760 /* DepthMapFileCreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthMapFileCreatorUITests.swift; sourceTree = "<group>"; };
 		22EB70222BCD117A00670760 /* DepthMapFileCreatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthMapFileCreatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22EB702F2BCD176500670760 /* GrayscaleToDepthConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscaleToDepthConverter.swift; sourceTree = "<group>"; };
+		22EB70312BCD178000670760 /* GrayscaleToDepth.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GrayscaleToDepth.metal; sourceTree = "<group>"; };
+		22EB70332BCD17B300670760 /* DepthMapUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthMapUtils.swift; sourceTree = "<group>"; };
+		22EB70352BCD17DC00670760 /* CGImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageUtils.swift; sourceTree = "<group>"; };
+		22EB70372BCD1F0500670760 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		22EB703A2BCD1F7C00670760 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +108,14 @@
 			isa = PBXGroup;
 			children = (
 				22EB70042BCD117900670760 /* DepthMapFileCreatorApp.swift */,
-				22EB70062BCD117900670760 /* ContentView.swift */,
-				22EB70082BCD117A00670760 /* Assets.xcassets */,
+				22EB703E2BCD207D00670760 /* ViewModel */,
+				22EB703D2BCD207700670760 /* View */,
+				22EB703C2BCD206F00670760 /* Utils */,
 				22EB700A2BCD117A00670760 /* DepthMapFileCreator.entitlements */,
+				22EB70312BCD178000670760 /* GrayscaleToDepth.metal */,
+				22EB70082BCD117A00670760 /* Assets.xcassets */,
 				22EB700B2BCD117A00670760 /* Preview Content */,
+				22EB70392BCD1F7C00670760 /* Localizable.strings */,
 			);
 			path = DepthMapFileCreator;
 			sourceTree = "<group>";
@@ -127,6 +143,32 @@
 				22EB70222BCD117A00670760 /* DepthMapFileCreatorUITestsLaunchTests.swift */,
 			);
 			path = DepthMapFileCreatorUITests;
+			sourceTree = "<group>";
+		};
+		22EB703C2BCD206F00670760 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				22EB70332BCD17B300670760 /* DepthMapUtils.swift */,
+				22EB70352BCD17DC00670760 /* CGImageUtils.swift */,
+				22EB702F2BCD176500670760 /* GrayscaleToDepthConverter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		22EB703D2BCD207700670760 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22EB70062BCD117900670760 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22EB703E2BCD207D00670760 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22EB70372BCD1F0500670760 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22EB700D2BCD117A00670760 /* Preview Assets.xcassets in Resources */,
+				22EB703B2BCD1F7C00670760 /* Localizable.strings in Resources */,
 				22EB70092BCD117A00670760 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EB70382BCD1F0500670760 /* MainViewModel.swift in Sources */,
 				22EB70072BCD117900670760 /* ContentView.swift in Sources */,
 				22EB70052BCD117900670760 /* DepthMapFileCreatorApp.swift in Sources */,
+				22EB70342BCD17B300670760 /* DepthMapUtils.swift in Sources */,
+				22EB70362BCD17DC00670760 /* CGImageUtils.swift in Sources */,
+				22EB70322BCD178000670760 /* GrayscaleToDepth.metal in Sources */,
+				22EB70302BCD176500670760 /* GrayscaleToDepthConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +343,17 @@
 			targetProxy = 22EB701D2BCD117A00670760 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22EB70392BCD1F7C00670760 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22EB703A2BCD1F7C00670760 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		22EB70242BCD117A00670760 /* Debug */ = {
@@ -434,10 +493,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.DepthMapFileCreator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,10 +531,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.DepthMapFileCreator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
